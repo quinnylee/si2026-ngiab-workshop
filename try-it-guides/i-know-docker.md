@@ -24,8 +24,16 @@ The requirements for a Python model to be integrated into NGIAB are as follows:
 7. Download the data package from Box if you haven't already.
 8. Test your NGIAB build with this command:
 
+  For Docker users:
+
    ```bash
    docker run --rm -it -v "/absolute/path/to/test/package:/ngen/ngen/data" name-of-your-NGIAB-image /ngen/ngen/data
+   ```
+
+  For Podman users:
+
+   ```bash
+   podman run --rm -it -v "/absolute/path/to/test/package:/ngen/ngen/data" name-of-your-NGIAB-image /ngen/ngen/data
    ```
 
    Follow the interactive terminal prompts to run NGIAB.

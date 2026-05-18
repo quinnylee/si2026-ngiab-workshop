@@ -27,14 +27,24 @@ The requirements for a Python model to be integrated into NGIAB are as follows:
    1. Make sure your working directory is the `docker` directory within the `NGIAB-CloudInfra` directory. To check your working directory, use `pwd` (**P**rint **W**orking **D**irectory). You can use `cd path/to/desired/directory` to **C**hange **D**irectories to the `docker` directory.
    2. Use this command to build your Docker image.
 
+   For Docker users:
+
     ```bash
     docker build -f Dockerfile -t devcon-workshop .
+    ```
+
+   For Podman users:
+
+      For Docker users:
+
+    ```bash
+    podman build -f Dockerfile -t devcon-workshop .
     ```
 
     The `-f` tag indicates the location of the Dockerfile relative to the build context, the `-t` tag specifies the name of your new Docker image, and `.` is the build context (the current working directory).
 
 5. Edit the Dockerfile to make sure that the bmi-dummy Python package is installed in the NGIAB image.
-   1. Insert this line at line 293 (after the two `ADD --unpack` commands), which is in the `final` stage. Make sure to save!
+   1. Insert this line in the `final` stage after the dHBV install. Make sure to save!
 
     ```Dockerfile
     RUN uv pip install bmi-dummy
@@ -46,8 +56,16 @@ The requirements for a Python model to be integrated into NGIAB are as follows:
 7. Download the data package from Box if you haven't already.
 8. Run NGIAB with this command. Make sure to replace `/absolute/path/to/test/package` with the actual absolute path to the downloaded data package. Follow the interactive terminal prompts once the container (the virtual machine containing the image) is started.
 
+   For Docker users:
+
    ```bash
    docker run --rm -it -v "/absolute/path/to/test/package:/ngen/ngen/data" devcon-workshop /ngen/ngen/data
+   ```
+
+   For Podman users:
+
+   ```bash
+   podman run --rm -it -v "/absolute/path/to/test/package:/ngen/ngen/data" devcon-workshop /ngen/ngen/data
    ```
 
    In this command, `--rm` tells Docker to automatically delete the container once the process is finished. `-it` tells Docker to open an interactive terminal. `-v` tells Docker to "mount" a local directory to a specific location in the virtual machine (like sticking a flash drive into a computer), and the following arguments take the form of `/path/to/local/directory:/path/to/virtual/directory`. `devcon-workshop` is the name of the image we are running (set in steps 3 and 5). `/ngen/ngen/data` runs the NGIAB guide script.
@@ -56,6 +74,16 @@ If your NGIAB run successfully executes, you've integrated the model!
 
 ## Troubleshooting
 
-### Running out of memory during Docker builds
+### Running out of memory during builds
 
 Try changing every instance of `-j $(nproc)` to a small number of processes, like `-j 4` or `-j 2`.
+
+### Podman NGIAB run randomly crashes
+
+Your Podman virtual machine may default to a smaller size than is necessary for NGIAB. Try restarting the container and setting the amount of RAM to something more appropriate and then try running NGIAB again:
+
+```bash
+podman machine stop
+podman machine init -m 8192 # 8 GiB of RAM
+podman machine start
+```
