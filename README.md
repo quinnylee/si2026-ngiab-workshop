@@ -8,7 +8,8 @@ Please follow the instructions in [Before the Workshop](before-the-workshop.md) 
 
 ## During the Workshop
 
-For the "how to run NGIAB" demo portion of the workshop, please see our NGIAB guide.
+For the "how to run NGIAB" demo portion of the workshop, please see our [NGIAB guide](ngiab.md).
+
 For the hands-on integration demo portion of the workshop, please start at the [introduction guide](try-it-intro.md).
 
 ## After the Workshop
