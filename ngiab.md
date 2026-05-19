@@ -1,4 +1,4 @@
-# Three ways to run NextGen in a Box (NGIAB)
+# Four ways to run NextGen in a Box (NGIAB)
 
 Before starting this section, make sure you have `uv` installed, and make sure you have cloned the NGIAB-CloudInfra and DataStreamCLI repositories. See our [Before the Workshop](before-the-workshop.md) guide for instructions.
 
@@ -30,7 +30,13 @@ chmod +x guide.sh
 
 ![image](demo_tapes/data_prep_guide.gif)
 
-![image](demo_tapes/Screen%20Recording%202026-05-19%20at%209.13.31 AM.gif)
+![image](demo_tapes/vis.gif)
+
+## CCNH in JupyterHub
+
+Please follow the instructions in the [HydroShare resource](https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/). Running NGIAB in CCNH allows you to bypass any setup steps and run the simulation in the cloud.
+
+![image](demo_tapes/ccnh.png)
 
 ## DataStreamCLI
 
