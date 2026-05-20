@@ -148,7 +148,7 @@ Most users will fall into this category. You can use Docker if you have administ
 
 ## Podman users
 
-Please use Podman if you do not have administrative privileges. Your system administrator must install or build Podman if you do not have administrative (`sudo`) privileges.
+Please use Podman if you do not have administrative privileges. Your system administrator must install or build Podman if you do not have administrative (`sudo`) privileges. Note that instructions to clone DataStreamCLI are not in this section, because DataStreamCLI does not currently support usage through Podman.
 
 ### System Requirements
 
@@ -179,14 +179,7 @@ to install Podman.
    git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
    ```
 
-4. Within WSL, clone the DataStreamCLI source code in your desired directory.
-
-    ```bash
-    cd /path/to/directory # navigate to your desired directory
-    git clone https://github.com/CIROH-UA/datastreamcli.git
-    ```
-
-5. Within WSL, install `uv`.
+4. Within WSL, install `uv`.
 
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -205,14 +198,7 @@ to install Podman.
     git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
     ```
 
-3. Clone the DataStreamCLI source code in your desired directory.
-
-    ```zsh
-    cd /path/to/directory # navigate to your desired directory
-    git clone https://github.com/CIROH-UA/datastreamcli.git
-    ```
-
-4. Install `uv`.
+3. Install `uv`.
 
    ```zsh
    curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -231,14 +217,7 @@ to install Podman.
     git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
     ```
 
-3. Clone the DataStreamCLI source code in your desired directory.
-
-    ```bash
-    cd /path/to/directory # navigate to your desired directory
-    git clone https://github.com/CIROH-UA/datastreamcli.git
-    ```
-
-4. Install `uv`.
+3. Install `uv`.
 
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
