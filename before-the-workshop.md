@@ -2,6 +2,10 @@
 
 Before the workshop, please use this checklist to make sure your computer is set up to build and run NextGen in a Box (NGIAB). These instructions are specific for each operating system. If you have any questions, please don't hesitate to contact the workshop team. These instructions are compiled from the [NGIAB 101 training module](https://ngiab.ciroh.org/training-NGIAB-101/installation.html).
 
+## Navigation
+
+[Docker users](#docker-users) | [Podman users](#podman-users)
+
 ## Docker users
 
 Most users will fall into this category. You can use Docker if you have administrative privileges on your computer.
