@@ -38,6 +38,23 @@ chmod +x guide.sh
 
 Please follow the instructions in the [HydroShare resource](https://www.hydroshare.org/resource/27045581bdea4808a393330f2417379c/). Running NGIAB in CCNH allows you to bypass any setup steps and run the simulation in the cloud.
 
+On the Hydroshare page, click on the "Open with..." dropdown menu and select "CIROH-2i2c JupyterHub (Workshop).
+
+![image](demo_tapes/hydroshare.png)
+
+The username and password will be shared during the workshop.
+Select a medium "CIROH Community NextGen Hub" image.
+
+![image](demo_tapes/2i2c.png)
+
+Once your server starts, you can follow the Jupyter notebooks in this order:
+
+1. NextGen Data Preparation
+2. NextGen Run
+3. NextGen TEEHR Evaluation
+4. NextGen Output Analysis
+5. NextGen Calibration
+
 ![image](demo_tapes/ccnh.png)
 
 ## DataStreamCLI
