@@ -2,6 +2,8 @@
 
 Before starting this section, make sure you have `uv` installed, and make sure you have cloned the NGIAB-CloudInfra and DataStreamCLI repositories. See our [Before the Workshop](before-the-workshop.md) guide for instructions.
 
+In this section, we will be running NOM+CFE+t-route for the area upstream of USGS gage 02342500 (Uchee Creek Near Fort Mitchell, Al.) over the time period 2020-01-01 to 2020-01-07.
+
 ## Data Preprocessor
 
 The NGIAB Data Preprocessor has a built-in function to run NGIAB. This is convenient, but does not allow you to modify any of the preprocessed data files before the run starts.
@@ -47,8 +49,8 @@ uvx --from ngiab-prep cli -i gage-02342500 -s
 cd /path/to/datastreamcli
 cp ~/ngiab_preprocess_output/gage-02342500/config/gage-02342500_subset.gpkg .
 chmod +x ./scripts/datastream
-./scripts/datastream -s 202006200100 \
-                    -e 202006210000 \
+./scripts/datastream -s 202001010100 \
+                    -e 202001070000 \
                     -C NWM_RETRO_V3 \
                     -d $(pwd)/data/datastream_test \
                     -g $(pwd)/gage-02342500_subset.gpkg \
