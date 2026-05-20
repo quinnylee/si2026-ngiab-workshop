@@ -59,7 +59,7 @@ Once your server starts, you can follow the Jupyter notebooks in this order:
 
 ## DataStreamCLI
 
-You can run NGIAB locally through DataStreamCLI. We will subset the hydrofabric using the Data Preprocessor and then use that to run DataStreamCLI.
+You can run NGIAB locally through DataStreamCLI. We will subset the hydrofabric using the Data Preprocessor and then use that to run DataStreamCLI. *Please note: this exercise is currently not supported for Podman.*
 
 ```bash
 uvx --from ngiab-prep cli -i gage-02342500 -s
