@@ -153,40 +153,8 @@ Please use Podman if you do not have administrative privileges. Your system admi
 ### System Requirements
 
 - Minimum 8 GB of RAM
-- Windows, macOS, or Linux
-
-### Windows
-
-1. Make sure Windows Subsystem for Linux (WSL) is installed. If it is not, you can install it with this command:
-
-   ```powershell
-   wsl --install
-   ```
-
-2. Within WSL, make sure Podman is installed. If you have `sudo` privileges, you can run
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get -y install podman
-   ```
-
-to install Podman.
-
-3. Within WSL, clone the NGIAB source code in your desired directory.
-
-   ```bash
-   cd /path/to/directory # navigate to your desired directory
-   git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
-   ```
-
-4. Within WSL, install `uv`.
-
-   ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh
-
-   # if you don't have curl, you can use wget
-   # wget -qO- https://astral.sh/uv/install.sh | sh
-   ```
+- Fully supported: macOS; Linux
+- Partially supported: Windows
 
 ### macOS
 
@@ -225,6 +193,35 @@ to install Podman.
    # if you don't have curl, you can use wget
    # wget -qO- https://astral.sh/uv/install.sh | sh
    ```
+
+### Windows
+
+> **WARNING**: At the time of writing, Podman is subject to significant filesystem constraints (see [containers/podman#21813](https://github.com/containers/podman/issues/21813)). As such, it will require fairly specific configurations to work reliably, and it will not support the visualizer script at this time. We strongly recommend that WSL users opt for Docker if possible.
+
+1. Make sure Windows Subsystem for Linux (WSL) is installed. If it is not, you can install it with this command:
+
+   ```powershell
+   wsl --install
+   ```
+
+2. Install and configure the Podman engine within windows, as well as a Podman remote client within WSL. Detailed instructions on this process and related considerations can be found here: https://dev.to/octasoft-ltd/running-podman-on-windows-with-wsl-a-practical-guide-4jl8
+
+3. Within WSL, clone the NGIAB source code into your desired directory. This and all subsequent steps **must** be done within a subdirectory of `/mnt/wsl/` or a named volume that is exposed to the Podman machine. Otherwise, your container will be unable to access your files.
+
+   ```bash
+   cd /mnt/wsl/path/to/directory # navigate to your desired directory
+   git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
+   ```
+
+4. Within WSL, install `uv`.
+
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+
+   # if you don't have curl, you can use wget
+   # wget -qO- https://astral.sh/uv/install.sh | sh
+   ```
+
 
 ## Troubleshooting
 
