@@ -1,6 +1,6 @@
 # Integration tips
 
-This document is a compilation of some general guidelines for community model integration that we have discovered and developed through experience.
+In addition to the ["Technical guidance for the inclusion of models/modules in the NextGen Water Resources Modeling Framework"](https://hub.ciroh.org/assets/files/Nextgen_Model_Development_Specifications_WG2_v1.docx-01c8ca7525b009168f416107d8aaf29d.pdf) document, which contains specific information on the philosophy and BMI implementation of NextGen models, we have included this document, which is a compilation of some general guidelines for community model integration that we have discovered and developed through experience.
 
 ## Technical requirements
 
