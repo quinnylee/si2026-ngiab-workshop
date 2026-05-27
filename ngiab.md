@@ -6,7 +6,7 @@ In this section, we will be running NOM+CFE+t-route for the area upstream of USG
 
 ## Data Preprocessor
 
-The NGIAB Data Preprocessor has a built-in function to run NGIAB. This is convenient, but does not allow you to modify any of the preprocessed data files before the run starts.
+The NGIAB Data Preprocessor has a built-in function to run NGIAB. This is convenient, but does not allow you to modify any of the preprocessed data files before the run starts. *Please note: this exercise is currently not supported for Podman.*
 
 ```bash
 uvx --from ngiab-prep cli -i gage-02342500 -sfr --start 2020-01-01 --end 2020-01-07 --source aorc --run
