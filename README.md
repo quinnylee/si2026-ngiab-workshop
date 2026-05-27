@@ -14,6 +14,6 @@ For the hands-on integration demo portion of the workshop, please start at the [
 
 ## After the Workshop
 
-Workshop slides will be uploaded after DevCon.
+[Workshop slides](devcon_model_int_workshop.pdf) are now uploaded.
 
 For a compilation of resources for integrating your own models, see our [integration tips](integration-tips.md).
