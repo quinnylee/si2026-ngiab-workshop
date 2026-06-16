@@ -1,6 +1,6 @@
-# Model Integration in NextGen, NGIAB, and NRDS
+# Summer Institute 2026 NGIAB workshop
 
-Welcome to DevCon 2026! This repository contains the materials for the workshop "Model Integration in NextGen, NGIAB, and NRDS," presented at DevCon 2026. The authors of this workshop are Josh Cunningham, Jordan Laser, Harsha Vemula, Quinn Lee Russell, Nia Minor, Gio Romero, Arpita Patel, Zach Wills, and Nels Frazier.
+This repository contains the materials for the NGIAB workshop presented at the 2026 Water Prediction Innovators Summer Institute. The authors of this workshop are Quinn Lee Russell, Josh Cunningham, Arpita Patel, Harsha Vemula, Kamal Chowdhury, and Nia Minor.
 
 ## Before the Workshop
 
@@ -14,6 +14,6 @@ For the hands-on integration demo portion of the workshop, please start at the [
 
 ## After the Workshop
 
-[Workshop slides](devcon_model_int_workshop.pdf) are now uploaded.
+Workshop slides will be uploaded after the session.
 
 For a compilation of resources for integrating your own models, see our [integration tips](integration-tips.md).

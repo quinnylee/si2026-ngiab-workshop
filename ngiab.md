@@ -1,4 +1,4 @@
-# Four ways to run NextGen in a Box (NGIAB)
+# Three ways to run NextGen in a Box (NGIAB)
 
 Before starting this section, make sure you have `uv` installed, and make sure you have cloned the NGIAB-CloudInfra and DataStreamCLI repositories. See our [Before the Workshop](before-the-workshop.md) guide for instructions.
 
@@ -56,27 +56,3 @@ Once your server starts, you can follow the Jupyter notebooks in this order:
 5. NextGen Calibration
 
 ![image](demo_tapes/ccnh.png)
-
-## DataStreamCLI
-
-You can run NGIAB locally through DataStreamCLI. We will subset the hydrofabric using the Data Preprocessor and then use that to run DataStreamCLI. *Please note: this exercise is currently not supported for Podman.*
-
-```bash
-uvx --from ngiab-prep cli -i gage-02342500 -s
-cd /path/to/datastreamcli
-cp ~/ngiab_preprocess_output/gage-02342500/config/gage-02342500_subset.gpkg .
-chmod +x ./scripts/datastream
-./scripts/datastream -s 202001010100 \
-                    -e 202001070000 \
-                    -C NWM_RETRO_V3 \
-                    -d $(pwd)/data/datastream_test \
-                    -g $(pwd)/gage-02342500_subset.gpkg \
-                    -R $(pwd)/configs/ngen/realization_sloth_nom_cfe_pet_troute.json \
-                    -n 4
-```
-
-![image](demo_tapes/datastreamcli.gif)
-
-`-s` indicates the **s**tart date and time, `-e` indicates the **e**nd date and time, `-C` indicates the forcing sour**c**e, `-d` indicates the output **d**irectory, `-g` indicates the **g**eopackage, `-R` indicates the **r**ealization template, and `-n` indicates the **n**umber of processes.
-
-Note that DataStreamCLI internally processes forcings and generates realizations and BMI configuration files for you, as well as automatically queuing up a NextGen simulation.

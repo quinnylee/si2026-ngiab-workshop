@@ -48,14 +48,7 @@ Most users will fall into this category. You can use Docker if you have administ
     git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
     ```
 
-5. Within WSL, clone the DataStreamCLI source code in your desired directory.
-
-    ```bash
-    cd /path/to/directory # navigate to your desired directory
-    git clone https://github.com/CIROH-UA/datastreamcli.git
-    ```
-
-6. Within WSL, install `uv`.
+5. Within WSL, install `uv`.
 
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -89,14 +82,7 @@ Most users will fall into this category. You can use Docker if you have administ
     git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
     ```
 
-4. Clone the DataStreamCLI source code in your desired directory.
-
-    ```zsh
-    cd /path/to/directory # navigate to your desired directory
-    git clone https://github.com/CIROH-UA/datastreamcli.git
-    ```
-
-5. Install `uv`.
+4. Install `uv`.
 
    ```zsh
    curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -130,14 +116,7 @@ Most users will fall into this category. You can use Docker if you have administ
     git clone https://github.com/CIROH-UA/NGIAB-CloudInfra.git
     ```
 
-4. Clone the DataStreamCLI source code in your desired directory.
-
-    ```bash
-    cd /path/to/directory # navigate to your desired directory
-    git clone https://github.com/CIROH-UA/datastreamcli.git
-    ```
-
-5. Install `uv`.
+4. Install `uv`.
 
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -148,7 +127,7 @@ Most users will fall into this category. You can use Docker if you have administ
 
 ## Podman users
 
-Please use Podman if you do not have administrative privileges. Your system administrator must install or build Podman if you do not have administrative (`sudo`) privileges. Note that instructions to clone DataStreamCLI are not in this section, because DataStreamCLI does not currently support usage through Podman.
+Please use Podman if you do not have administrative privileges. Your system administrator must install or build Podman if you do not have administrative (`sudo`) privileges.
 
 ### System Requirements
 
@@ -221,7 +200,6 @@ Please use Podman if you do not have administrative privileges. Your system admi
    # if you don't have curl, you can use wget
    # wget -qO- https://astral.sh/uv/install.sh | sh
    ```
-
 
 ## Troubleshooting
 
